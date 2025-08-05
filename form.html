@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Booking Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f8f9fa;
+      background: url(formad.jpg);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="email"], input[type="date"], input[type="time"], input[type="number"], select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .checkbox-group label {
+      display: inline-block;
+      margin-right: 15px;
+    }
+    .section {
+      margin-top: 20px;
+      padding-top: 10px;
+      border-top: 1px solid #ccc;
+    }
+    .signature-section {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .signature-section div {
+      width: 48%;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+     <ul>
+      <li><a href="index.html">Home</a></li><br>
+      <li><a href="services.html">Services</a></li><br>
+      <li><a href="about.html">About</a></li><br>
+      <li><a href="form.html">Form</a></li><br>
+    </ul>
+  </nav>
+
+  <h1>Studio Booking Form</h1>
+  <form>
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" required />
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <div class="section">
+      <label>Purpose of Booking:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="purpose" value="Song Recording" /> Song Recording</label>
+        <label><input type="checkbox" name="purpose" value="Piano Lesson" /> Piano Lesson</label>
+        <label><input type="checkbox" name="purpose" value="Guitar Lesson" /> Guitar Lesson</label>
+        <label><input type="checkbox" name="purpose" value="Vocal Lesson" /> Vocal Lesson</label>
+        <label><input type="checkbox" name="purpose" value="Audio Production" /> Audio Production</label>
+        <label><input type="checkbox" name="purpose" value="Video Production" /> Video Production</label>
+        <label><input type="checkbox" name="purpose" value="Graphic Design" /> Graphic Design</label>
+      </div>
+    </div>
+
+    <div class="section">
+      <label>Have you recorded previously?</label>
+      <label><input type="radio" name="recordedBefore" value="Yes" /> Yes</label>
+      <label><input type="radio" name="recordedBefore" value="No" /> No</label>
+      <label>If Yes, from where?</label>
+      <input type="text" name="previousStudio" />
+    </div>
+
+    <div class="section">
+      <label>Type of Recording:</label>
+      <select name="recordingType">
+        <option value="">-- Select --</option>
+        <option value="Album Recording">Album Recording</option>
+        <option value="EP Recording">EP Recording</option>
+        <option value="Demo Production">Demo Production</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label>Number of Tracks:</label>
+      <input type="number" name="tracks" min="1" />
+    </div>
+
+    <label for="musicCenter">Music Center (if applicable):</label>
+    <input type="text" id="musicCenter" name="musicCenter" />
+
+    <div class="section">
+      <label>Preferred Dates (up to 3):</label>
+      <input type="date" name="preferredDate1" />
+      <input type="date" name="preferredDate2" />
+      <input type="date" name="preferredDate3" />
+    </div>
+
+    <div class="section">
+      <label>Session Schedule (1hr 30min):</label>
+      <label>Date:</label>
+      <input type="date" name="sessionDate" />
+      <label>Start Time:</label>
+      <input type="time" name="startTime" />
+      <label>End Time:</label>
+      <input type="time" name="endTime" />
+      <label>Period (Morning/Afternoon/Evening):</label>
+      <input type="text" name="period" />
+    </div>
+
+    <div class="section">
+      <label>Fees and Charges:</label>
+      <label>Total Fee:</label>
+      <input type="number" name="totalFee" step="0.01" />
+      <label>Deposit (60%):</label>
+      <input type="number" name="deposit" step="0.01" />
+      <label>Balance:</label>
+      <input type="number" name="balance" step="0.01" />
+    </div>
+
+    <div class="section">
+      <label>Do you agree to our terms and conditions?</label>
+      <label><input type="radio" name="agree" value="Agree" /> I Agree</label>
+      <label><input type="radio" name="agree" value="Disagree" /> I Disagree</label>
+    </div>
+
+    <div class="signature-section">
+      <div>
+        <label>Client's Signature:</label>
+        <input type="text" name="clientSignature" />
+        <label>Date Signed:</label>
+        <input type="date" name="dateSigned" />
+      </div>
+      <div>
+        <label>Official Use Only:</label>
+        <label>Official's Name:</label>
+        <input type="text" name="officialName" />
+        <label>Official's Signature:</label>
+        <input type="text" name="officialSignature" />
+      </div>
+    </div>
+
+    <button type="submit">Submit Booking</button>
+  </form>
+</body>
+</html>

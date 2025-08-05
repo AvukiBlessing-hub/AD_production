@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio Services</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            background: url(background.jpg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .service-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 20px;
+        }
+
+        .service-title {
+            font-size: 1.5em;
+            margin: 0 0 10px;
+            color: #333333;
+        }
+
+        .service-description {
+            font-size: 1em;
+            color: #666666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+
+            <li><a href="index.html">Home</a></li><br>
+            <li><a href="services.html">Services</a></li><br>
+            <li><a href="about.html">About</a></li><br>
+            <li><a href="form.html">Form</a></li><br>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <div class="service-box">
+            <img src="recording.jpg" alt="Audio Production" class="service-image" />
+            <div class="service-content">
+                <h3 class="service-title">Audio Production</h3>
+                <p class="service-description">
+                    "We offer professional audio production services tailored to artists, podcasters, and creators."
+                </p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <img src="video shooting ad.jpg" alt="Video Production" class="service-image" />
+            <div class="service-content">
+                <h3 class="service-title">Video Production</h3>
+                <p class="service-description">
+                    Full-service video production including shooting, editing, color grading, and post-production for
+                    all formats.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <img src="gd ad.jpg" alt="Graphic Design" class="service-image" />
+            <div class="service-content">
+                <h3 class="service-title">Graphic Design</h3>
+                <p class="service-description">
+                    Creative and modern graphic design solutions including branding, logos, web design, and marketing
+                    materials.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
